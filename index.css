@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./fonts/JosefinSans-Regular.woff2') format('woff2'),
+         url('./fonts/JosefinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./fonts/JosefinSans-SemiBold.woff2') format('woff2'),
+        url('./fonts/JosefinSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./fonts/JosefinSans-Light.woff2') format('woff2'),
+        url('./fonts/JosefinSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+.base-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.entire-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+    height: 100%;
+}
+.info-container{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    padding: 5% 7% 4%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+.text-box{
+    margin-top: 66px;
+}
+span:nth-child(1){
+    color: #CE9898;
+    font-weight: 300;
+    Font-size: 64px;
+    line-height: 64px;
+    letter-spacing: 17.32px;
+}
+.heading{
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: 17.32px;
+    font-weight: 600;
+    color: #423A3A;
+}
+.info-text{
+    color: #CE9898;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 32px;
+}
+#email{
+    width: 445px;
+    height: 56px;
+    border: 1px rgba(206, 152, 152, 0.5) solid;
+    border-radius: 28px;
+    padding-left: 20px;
+    padding-top: 5px;
+    color: #423A3A;
+    outline: none;
+    background: none;
+}
+#email:focus{
+    border: 1px rgba(197, 9, 119, 0.5) solid;
+}
+::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(206, 152, 152, 0.7);
+}
+#enter-email{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#error-sign{
+    position: absolute;
+    right: 110;
+    display: none;
+    right: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#submit{
+    width: 100px;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+#submit:active{
+    background: linear-gradient(135deg, #ffd6d6 0%, #eca7a7 100%);
+    
+}
+.email-validation{
+    margin-top: 40px;  
+    display: flex;  
+    position: relative;
+}
+#error-text{
+    color: #F96464;
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    display: none;
+
+}
+
+.image-container{
+    display: flex;
+    object-fit: cover;
+    width: 40%;
+}
+.image-container1{
+    display: none;
+
+}
+.img-cont{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px){
+       .image-container{
+        display: none;
+       }
+       .image-container1{
+        display: unset;
+       }
+       .entire-container{
+        display: flex;
+        flex-direction: column;
+        height: unset;
+       }
+       .base-container{
+        height: unset;
+       }
+       .span:nth-child(1){
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 42px;
+        letter-spacing: 10.82px;
+       }
+       .heading{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 42px;
+        letter-spacing: 10.82px;
+       }
+       .info-text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 10px 32px;
+       }
+       .text-box{
+        text-align: center;
+        margin-top: 64px;
+       }
+       #email{
+        width: 311px;
+        height: 48px;
+       }
+       #submit{
+        width: 64px;
+        height: 48px;
+       }
+       ::placeholder{
+        font-size: 14px;
+       }
+       .info-container{
+        width: 100%;
+        display: flex;
+        padding: 3% 0% 15%;
+       }
+       .mobile-image{
+        width: 100%;
+        margin-top: 30px;
+       }
+       .email-validation{
+        margin: 0 auto;
+        margin-top: 30px;
+       }
+       .logo{
+        margin: 30px 32px 0;
+       }
+       #error-sign{
+        right: 73px;
+       }
+       #error-text{
+        line-height: 13px;
+       }
+       span:nth-child(1){
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 42px;
+        letter-spacing: 10.82px;
+       }
+
+}
